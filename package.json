@@ -4,11 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-<<<<<<< HEAD
     "dev": "nodemon index.js"
-=======
-    "dev": "nodemon server.js"
->>>>>>> b53eaa94041a203c7549f0e6b470f4dd93625907
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
