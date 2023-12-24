@@ -1,0 +1,31 @@
+<% include ./partials/header.ejs %>
+<div class="w-full h-full bg-white">
+    <div class="cards flex flex-wrap gap-10 text-black px-10 max-sm:justify-center">
+        <%posts.forEach(function(elem) { %>
+            
+            
+                <div class="w-32 card_box" data-postid="<%= elem._id %>">
+                    <div class="card w-full h-40 bg-zinc-600 rounded overflow-hidden">
+                        <img src="/images/uploads/<%= elem.image %>" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <h5><%= elem.title %></h5>
+                    <h6 class="text-xs opacity-70">@<%=elem.user.username%></h6>
+                </div>
+            
+            
+        <% }) %>
+    </div>
+</div>
+<script>
+    document.querySelectorAll(".card_box").forEach(function(card) {
+        card.addEventListener("click", function() {
+            // Retrieve the post ID from the data-postid attribute
+
+                const postId=card.getAttribute("data-postid")
+            // Redirect to the specific post page using the obtained post ID
+           window.location = "/show/posts/"+ postId;
+        });
+    });
+</script>
+
+<% include ./partials/footer.ejs %>

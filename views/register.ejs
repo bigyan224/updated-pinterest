@@ -1,0 +1,24 @@
+<% include ./partials/header.ejs %>
+<div class="w-full h-screen bg-zinc-300 flex items-center justify-center bg-center bg-no-repeat bg-cover bg-[url('/images/background_image.jpg')]">
+
+    <div class="w-[500px] min-h-[400px] h-[600px] bg-white px-16 py-5 rounded-[30px]">
+      <img src="/images/logo.png" class="h-16 mx-auto" alt="">
+      <h1 class="text-2xl leading-none capitalize text-center font-semibold text-zinc-700 mt-2 mb-4">create new account</h1>
+      <form action="/register" method="post">
+          <input class=" border-2 rounded block mt-2 w-full px-3 py-2" type="text" name="fullName" id="" placeholder="Full Name">
+          <input class=" border-2 rounded block mt-2 w-full px-3 py-2" type="text" name="username" id="" placeholder="username">
+          <input class=" border-2 rounded block mt-2 w-full px-3 py-2" type="email" name="email" id="" placeholder="email">
+        <input class=" border-2 rounded block mt-2 w-full px-3 py-2" type="number" name="contact" id="" placeholder="contact">
+        <input class=" border-2 rounded block mt-2 w-full px-3 py-2" type="password" name="password" id="" placeholder="password">
+        <input class=" border-2 block mt-6 w-full px-3 py-2 bg-red-500 text-white rounded-full hover:cursor-pointer" type="submit" name="" id="" placeholder="submit" value="create acoount">
+      </form>
+      <p class=" text-xs mt-5 mb-2 text-center">By continuing, you agree to Pinterest's <br> <b>Terms of Service</b> Opens a new tab and acknowledge you've read our <br><b>Privacy Policy. </b><b>Notice at collection</b>
+      </p>
+      <hr>
+      <p class="text-xs mt-2 text-center leading-5"><b><a href="/login">Already have an account? Login</a></b><br>
+        Are you a business?
+        Get started here!
+     </p>
+    </div>
+  </div>
+<% include ./partials/footer.ejs %>
