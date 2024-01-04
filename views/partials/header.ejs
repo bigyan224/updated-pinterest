@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bigyan-pinterest</title>
+  <link rel="icon" type="image/x-icon" href="/images/logo.png">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
     rel="stylesheet"/>
@@ -14,14 +17,14 @@
   <% if(nav === true) { %>
 
     <div class="  navbar w-full py-5 flex text-black justify-between items-center px-10 sticky top-0 overflow-hidden z-10 max-sm:px-2 bg-white">
-      <div class="h-10 w-13 rounded-full overflow-hidden hover:bg-zinc-500 flex justify-center items-center">
+      <div class="h-10 w-13 rounded-full overflow-hidden hover:bg-zinc-200 flex justify-center items-center">
         <img src="/images/logo.png" alt="" class="h-8 w-14">
       </div>
   
-      <div class="flex gap-10 justify-center items-center">
-        <a href="/profile">Profile</a>
-        <a href="/">Home</a>
-        <a href="/logout" class="px-6 py-2 bg-red-600 rounded-lg text-white">Logout</a>
+      <div class="flex gap-4 justify-center items-center">
+        <a class="hover:bg-zinc-200 px-4 py-2 rounded-full active:bg-zinc-200" href="/profile">Profile</a>
+        <a class="hover:bg-zinc-200 px-4 py-2 rounded-full active:bg-zinc-200" href="/">Home</a>
+        <a href="/logout" class="px-6 py-2 bg-red-500 rounded-lg text-white hover:bg-red-600">Logout</a>
       </div>
     </div>
   <%} %>

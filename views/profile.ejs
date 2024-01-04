@@ -5,18 +5,18 @@
     </form>
     <div class="profile_dets  flex flex-col mt-10 items-center">
         <div class="w-32 h-32 bg-zinc-200 rounded-full  bg-center bg-cover bg-no-repeat relative" style="background-image: url('/images/uploads/<%=user.profileImage%>');">
-            <div class="h-8 w-8 rounded-full bg-zinc-200 absolute bottom-0 right-0 flex items-center justify-center" id="profile_img">
+            <div class="h-8 w-8 rounded-full bg-zinc-200 absolute bottom-0 right-0 flex items-center justify-center cursor" id="profile_img">
                 <i class="text-zinc-500 ri-pencil-fill"></i>
             </div>
         </div>
         <h1 class="text-3xl font-semibold mt-2"><%=fullName%></h1>
-        <h3 class="text-md text-zinc-300">@<%=username%></h3>
+        <h3 class="text-md text-zinc-500">@<%=username%></h3>
         <a href="/edit" class="bg-zinc-600 py-2 px-5 rounded-full text-xs font-semibold mt-2 text-white">Edit</a>
         <a href="/create_post" class="py-2 px-5 bg-red-500 rounded-lg mt-5 font-semibold text-xs text-white">Add new post</a>
     </div>
     <div class="cards px-10 mt-10 flex gap-10 flex-wrap max-sm:justify-center max-md:justify-center">
         <div>
-            <div class="card h-40 w-52 bg-zinc-300 rounded-lg bg-[url('/images/uploads/<%= user?.posts[0]?.image %>')] bg-cover bg-center"></div>
+            <div class="card h-40 w-52 bg-zinc-300 rounded-lg bg-[url('/images/uploads/<%= user?.posts[0]?.image %>')] bg-cover bg-center cursor"></div>
                 <a href="/show/posts" class="text-md font-bold mt-2">Your uploaded pins</a>
                 <h5 class="text-xs font-medium opacity-60"><%=user.posts.length%></h5>
         </div>

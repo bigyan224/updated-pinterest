@@ -1,5 +1,15 @@
+require('dotenv').config();
+const db =process.env.DATABASE_URI
+
+console.log(db)
 const mongoose =require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/updated_pinterest");
+mongoose.connect(db,{})
+.then(()=>{
+  console.log("connected to database")
+})
+.catch((error) => {
+  console.error('Error connecting to MongoDB:', error.message);
+});;
 const plm=require("passport-local-mongoose")
 
 const userSchema = mongoose.Schema({
